@@ -8,7 +8,7 @@ defmodule Mouth.Adapters.LocalTest do
     use Mouth.Messenger, otp_app: :mouth
 
     def init do
-      config = Confex.get_map(:mouth, LocalSender)
+      config = Confex.get_env(:mouth, LocalSender)
       {:ok, config}
     end
   end
